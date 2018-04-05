@@ -1,7 +1,5 @@
-# This is a library
 Gemfile.lock
 .ruby-version
 .ruby-gemset
-
-# Ignore pkg folder
 /pkg
+/tmp
