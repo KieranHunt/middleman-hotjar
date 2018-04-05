@@ -3,9 +3,13 @@ sudo: false
 cache: bundler
 
 before_install:
-  - gem install bundler # https://github.com/travis-ci/travis-ci/issues/9333#issuecomment-373042916
+  - gem install bundler
+  # https://github.com/travis-ci/travis-ci/issues/9333#issuecomment-373042916
 
 before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
   - bundle update
 
 rvm:
@@ -16,7 +20,7 @@ rvm:
 
 os:
   - linux
-  - osx
+  # - osx
 
 matrix:
   fast_finish: true
@@ -27,4 +31,8 @@ env:
   global:
     - TEST=true
 
-script: bundle exec rake
+script:
+  - bundle exec rake
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT -r 4e65a8cf75d0dd2b0cdc5b469fb54f963d270540041816f7a754af085bf9b2ae

@@ -19,4 +19,5 @@ group :test do
   gem 'cucumber'
   gem 'rspec'
   gem 'rubocop'
+  gem 'simplecov'
 end
