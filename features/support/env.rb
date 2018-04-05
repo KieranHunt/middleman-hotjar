@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ENV['TEST'] = 'true'
 
 PROJECT_ROOT_PATH = File.dirname(File.dirname(File.dirname(__FILE__)))

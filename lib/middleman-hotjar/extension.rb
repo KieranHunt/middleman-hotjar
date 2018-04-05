@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require 'middleman-core'
 
+# Add Hotjar analytics tracking code to your Middleman site
 class HotjarExtension < ::Middleman::Extension
   option :hjid, nil, 'Hotjar ID'
   option :hotjar_id, nil, 'Hotjar ID'
@@ -7,10 +10,10 @@ class HotjarExtension < ::Middleman::Extension
 
   def after_configuration
     options[:id] = options.id || options.hjid || options.hotjar_id
-    if options.id.nil?
-      $stderr.puts 'Hotjar: please specify a Hotjar ID'
-      raise ArgumentError, 'No Hotjar ID given' if app.build?
-    end
+    return unless options.id.nil?
+
+    warn 'Hotjar: please specify a Hotjar ID'
+    raise ArgumentError, 'No Hotjar ID given' if app.build?
   end
 
   helpers do
