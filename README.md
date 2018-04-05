@@ -16,8 +16,8 @@ gem middleman-hotjar
 2. Activate the extension in your `config.rb` file:
 
 ```erb
-activate :hotjar do |ga|
-  ga.hotjar_id = '1337' # Replace with your site's ID
+activate :hotjar do |hj|
+  hj.hotjar_id = '1337' # Replace with your site's ID
 end
 ```
 
