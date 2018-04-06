@@ -3,3 +3,4 @@ Gemfile.lock
 .ruby-gemset
 /pkg
 /tmp
+/coverage
