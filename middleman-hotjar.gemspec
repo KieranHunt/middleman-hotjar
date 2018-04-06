@@ -20,9 +20,5 @@ Gem::Specification.new do |s|
   s.executables = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  # The version of middleman-core your extension depends on
-  s.add_runtime_dependency('middleman-core', ['>= 4.2.1'])
-
-  # Additional dependencies
-  # s.add_runtime_dependency("gem-name", "gem-version")
+  s.add_runtime_dependency('middleman-core', ['>= 4.0'])
 end
