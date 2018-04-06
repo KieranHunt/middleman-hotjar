@@ -6,7 +6,7 @@
 [![Gem Version](https://img.shields.io/gem/v/middleman-hotjar.svg)](https://rubygems.org/gems/middleman-hotjar)
 
 
-Add Hotjar analytics tracking code to your Middleman site!
+Add [Hotjar](https://hotjar.com) analytics tracking code to your [Middleman](https://middlemanapp.com/) site!
 
 # Installation
 
