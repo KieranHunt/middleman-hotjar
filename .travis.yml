@@ -2,10 +2,6 @@ language: ruby
 sudo: false
 cache: bundler
 
-before_install:
-  - gem install bundler
-  # https://github.com/travis-ci/travis-ci/issues/9333#issuecomment-373042916
-
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
